@@ -23,6 +23,7 @@ public class Controlador_Formulario {
     private final String tabla = "usuario";
     private final String tabla2 = "formulario";
     
+    // consulta utilizada para obtener el cliente
     public int recuperarPorId(Connection conexion, int cliente) throws SQLException {
        int resultadoc=0;
         try{
@@ -40,6 +41,7 @@ public class Controlador_Formulario {
         }
         return resultadoc;
     }
+    // consulta utilizada para obtener el Nip y validar si es usuario cliente o Administrador
     public String recuperarPornip(Connection conexion, String nip) throws SQLException {
         String resultadoc="";
         
@@ -57,6 +59,7 @@ public class Controlador_Formulario {
         }
         return resultadoc;
     }
+    // Insert para generar el formulario y almacenarlo en la BD.
     public void guardar(Connection conexion, ModeloTarjeta tarjeta) throws SQLException{
         try{
             
@@ -93,6 +96,7 @@ public class Controlador_Formulario {
      * @return
      * @throws SQLException
      */
+    // consulta utilizada por el cliente para obtener los folios
     public ArrayList<ModeloTarjeta> recuperartarjetas(Connection conexion, int id) throws SQLException{
         ArrayList<ModeloTarjeta> tarjetas = new ArrayList<>();
         System.out.println(id);
@@ -109,6 +113,8 @@ public class Controlador_Formulario {
         return tarjetas;
         
     }
+    // Consulta las ls folios pendientes 
+    // consulta utilizada por el administrador.
     public ArrayList<ModeloTarjeta> recuperarpendietes(Connection conexion, String valor ) throws SQLException{
         ArrayList<ModeloTarjeta> tarjetas = new ArrayList<>();
         
@@ -126,6 +132,7 @@ public class Controlador_Formulario {
         return tarjetas;
         
     }
+    // métdo utilizado por el adminstrador para cambiar el estado de los folios.
     public void actualizar(Connection conexion, String estatus, int cliente, int folio ) throws SQLException{
         try{
             

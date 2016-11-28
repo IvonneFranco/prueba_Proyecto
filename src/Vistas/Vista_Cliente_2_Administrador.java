@@ -27,6 +27,7 @@ public class Vista_Cliente_2_Administrador extends javax.swing.JFrame {
     public Vista_Cliente_2_Administrador() {
         initComponents();
     }
+    // método para obtener los folios pendientes y por autorizar por el administrador
  private void traerpendietes(){
            
         try{
