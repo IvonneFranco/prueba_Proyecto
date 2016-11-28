@@ -12,11 +12,15 @@ import modelo.Modelo_Formulario;
 
 /**
  *
- * @author arkai
+ * @author Ivonne Franco
  */
 public class Valida_Campos {
     
     Controlador_Formulario formulario = new Controlador_Formulario();
+    /*
+     * método para validar que contenga números un campo.
+     *
+    */
     
     public int  validanumero(String dato){
         int numero_cliente =0;
@@ -27,6 +31,11 @@ public class Valida_Campos {
             return 0;
         }
     }
+    /*
+     * método para validar que un campo únicamente contega letras y números 
+     * No *<>/*+-} etc.
+     *
+    */
     public String validaalfanumericos(String dato){
         char[] arreglocadena =dato.toCharArray();
         String valor ="";
@@ -53,6 +62,10 @@ public class Valida_Campos {
         
        
     }
+    /*
+     * método para validar que contenga letras un campo.
+     *
+    */
     public String  validaletras(String letras){
         
         String letra = "";
@@ -63,6 +76,10 @@ public class Valida_Campos {
             return "0";
         }
     }
+    /*
+     * método generador de folios en un con un random utilizando función math.
+     * proyecto futuro utilizar números de Euler. o algoritmos con factorización.
+    */
     public int generafolio(){
         int varible = (int)(Math.random()*(999999999-100000000+1)+100000000);
         return varible;

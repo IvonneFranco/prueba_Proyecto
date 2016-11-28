@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author arkai
+ * @author Ivonne Franco
  */
 public class Vista_Cliente_1 extends javax.swing.JFrame {
     String[] partes= new String[3];

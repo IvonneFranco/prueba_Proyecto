@@ -13,6 +13,10 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+/**
+ *
+ * @author Ivonne Franco
+ */
 
 public class Inicio extends javax.swing.JFrame {
     int cliente = 0;
@@ -23,6 +27,7 @@ public class Inicio extends javax.swing.JFrame {
         
         
     }
+    // este método siempre devuelve el usuario conectado 
     public int usuario(int consulta){
         cliente = consulta;
         return cliente;
@@ -117,6 +122,7 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void IngresarbotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarbotonActionPerformed
+         // Valida campo que no esté vacío y que no contenga caracteres especiales 
         String nip = nipjtxt.getText();
         String consulta = "";
         String valor = validacampos.validaalfanumericos(nip);
@@ -126,6 +132,8 @@ public class Inicio extends javax.swing.JFrame {
                 consulta = formulario.recuperarPornip(Conexion.obtener(), nip);
                 String[] parts = consulta.split(" ");
                 System.out.println(consulta);
+                // valida que si el usuario está registrado como administrador o como cliente y los dirige
+                // a sus respectivas patallas. 
                 if(parts[0].equals("Administrador")){
                     Vista_Cliente_2_Administrador admin =new Vista_Cliente_2_Administrador();
                     admin.setVisible(true);

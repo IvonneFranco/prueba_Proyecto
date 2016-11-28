@@ -9,12 +9,15 @@ import java.sql.*;
 
 /**
  *
- * @author Fernando
+ * @author Ivonne Franco
  */
 public class Conexion {
 
     private static Connection cnx = null;
-
+/**
+ *
+ * método que permite obtener la conexión entre java y mysql
+ */
     public static Connection obtener() throws SQLException, ClassNotFoundException {
         if (cnx == null) {
             try {

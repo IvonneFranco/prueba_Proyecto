@@ -18,7 +18,7 @@ import modelo.ModeloTarjeta;
 
 /**
  *
- * @author arkai
+ * @author Ivonne Franco
  */
 public class Vista_Cliente_2_Administrador extends javax.swing.JFrame {
 

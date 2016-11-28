@@ -17,7 +17,7 @@ import modelo.ModeloTarjeta;
 
 /**
  *
- * @author arkai
+ * @author Ivonne Franco
  */
 public class Registrar extends javax.swing.JInternalFrame {
     String[] parts= new String[3];

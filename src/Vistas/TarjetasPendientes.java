@@ -20,7 +20,7 @@ import modelo.ModeloTarjeta;
 
 /**
  *
- * @author arkai
+ * @author Ivonne Franco
  */
 public class TarjetasPendientes extends javax.swing.JInternalFrame {
     String[] parts= new String[3];

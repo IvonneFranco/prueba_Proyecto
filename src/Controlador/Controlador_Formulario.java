@@ -17,7 +17,7 @@ import modelo.ModeloTarjeta;
 
 /**
  *
- * @author arkai
+ * @author Ivonne Franco
  */
 public class Controlador_Formulario {
     private final String tabla = "usuario";

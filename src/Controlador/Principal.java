@@ -6,15 +6,14 @@
 package Controlador;
 
 import Vistas.Menu;
-
-
-
 /**
  *
- * @author Fernando
+ * @author Ivonne Franco
  */
-public class Principal {
 
+public class Principal {
+    // aquí podrá correr el sistema.
+    
     public static void main(String[] args) {
         
          Menu vista = new Menu();

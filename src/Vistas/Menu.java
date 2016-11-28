@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author arkai
+ * @author Ivonne Franco
  */
 public class Menu extends javax.swing.JFrame {
 
@@ -30,6 +30,10 @@ public class Menu extends javax.swing.JFrame {
         initComponents();
         
     }
+    /**
+     * Método que permite validar el campo, solo con números.
+     * Permite ejecutar la consulta y la valida.
+     **/
     public void boton_validar_cliente(String dato){
        
         int valor = validacampos.validanumero(dato);
@@ -185,7 +189,12 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
-       String dato =clienteJtext.getText();
+       /**
+        * evento de botón, permite validar que un campo no esté vacío.
+        * de lo contrario mandará a llamar el método boton_validar_cliente pasando
+        * como parametro lo que contiene el campo.
+        **/
+        String dato =clienteJtext.getText();
        if(dato.equals("")){
             JOptionPane.showMessageDialog(this, "El campo debe estar lleno");
        }else{
@@ -195,7 +204,12 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_continuarActionPerformed
 
     private void clienteJtextKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clienteJtextKeyTyped
-       if (clienteJtext.getText().length()== 8)
+      /**
+       * solo permite que el usuario pueda escribit hasta 8 caracteres
+       * de lo contrario emitira un sonido
+       **/
+        
+        if (clienteJtext.getText().length()== 8)
        {
            evt.consume();
            Toolkit.getDefaultToolkit().beep();
